@@ -402,12 +402,48 @@ background-color: map-get($colors, theme-blue);
   border-radius: 3px;
   padding: 20px 50px;
   display: block;
-  background-color: #ff6d6d;
   color: #fff;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 3.2px;
-  text-align: center; }
+  text-align: center;
+  transition: transform ease .5s, color ease .5s;
+  position: relative;
+  overflow: hidden;
+  background: none;
+  z-index: 1; }
+  .button__link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #ff6d6d;
+    border-radius: 50% 50% 0 0;
+    height: 200%;
+    z-index: -1;
+    transition: transform ease .5s, color ease .5s; }
+  .button__link:hover {
+    color: #ff6d6d; }
+  .button__link:hover::before {
+    transform: matrix(0.1, 0, 0, 0.1, 0, 60); }
+  .button__link:focus {
+    box-shadow: 0px 0px 2px 1px #ccc; }
+
+body {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */ }
 
 /*# sourceMappingURL=main.min.css.map */
