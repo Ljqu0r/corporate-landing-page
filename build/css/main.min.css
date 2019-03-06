@@ -320,6 +320,7 @@ background-color: map-get($colors, theme-blue);
 }
 */
 .head-page {
+  background-color: #f9f9fb;
   background-image: url(../../images/main-bg.png);
   height: 100vh;
   display: flex;
@@ -374,7 +375,7 @@ background-color: map-get($colors, theme-blue);
       content: "";
       width: 17px;
       height: 19px;
-      background-image: url(../../images/play-rectangle.png);
+      background-image: url(../../images/play-arrow.svg);
       position: absolute;
       top: 50%;
       left: 50%;
